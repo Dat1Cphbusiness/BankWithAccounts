@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Main
+class Account
+class Bank
+
+
+
+Main : + static void main(String[] args)
+
+
+
+Account : - String name
+Account : - int id
+Account : - int balance
+Account : + Account(String name)
+Account : + String getName()
+Account : + getID()
+Account : + getBalance()
+Account : + setBalance()
+Account : + toString()
+
+
+
+Main -- Bank : inits
+Bank *-- Account : has
+Bank : - Account[] accounts
+Bank : - String name
+Bank : + Bank()
+Bank : + addAccount(String name, int startAmount)
+Bank : + toString()
+@enduml
