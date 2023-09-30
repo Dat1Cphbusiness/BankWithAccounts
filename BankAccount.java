@@ -36,7 +36,7 @@ class BankAccount extends Object{
 	}
 
     public String toString(){
-
+                    //Egon saldo: 300 ID: 0
     	String s = this.owner+ " saldo: "+this.balance+ " ID: "+ this.id;
 
 		return s;

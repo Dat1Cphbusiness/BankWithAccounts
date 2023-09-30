@@ -16,11 +16,27 @@ class Bank{
    
 
     public void addAccount(String name, int startAmount){
-    	BankAccount b = new BankAccount(name, startAmount);
+    	 BankAccount b = new BankAccount(name, startAmount);
          accounts.add(b);
     }
 
     //TODO: override toString method
+
+    @Override
+    public String toString(){
+ 		String s= "";
+
+ 		s = this.name+"\n"; 
+
+ 		for(BankAccount ba:accounts) {
+			//s +=
+			s = s + ba.getOwner()+"\n";
+
+ 		}
+ 		s+="\n"+super.toString();
+
+    	return s;
+    }
 
 
 }
